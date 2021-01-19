@@ -1,1 +1,24 @@
 @import "bootstrap";
+.top-image1{
+  width: 100vw;
+  height: 100vh;
+}
+
+// .center-box{
+//   background-color: rgba(255, 255, 255, 0.6);
+//   margin: -120px 0 0 -180px;
+//   position: absolute;
+//   top: 52%;
+//   left: 50%;      
+//   width: 360px;   
+//   height: 230px;  
+// }
+
+.center-logo-image{
+  width: 340px;
+  height: 230px;
+  margin: -120px 0 0 -180px;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+}
