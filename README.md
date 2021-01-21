@@ -7,8 +7,9 @@
 | email            | string       | null:false           |
 | nickname         | string       | null:false           |
 | password         | string       | null:false           |
-| prefecture       | integer      | null:false           |
-| municipality     | string       | null:false           |
+<!-- | prefecture       | integer      | null:false           |
+| municipality     | string       | null:false           | -->
+<!-- *実装段階で上記を追加する可能性あり -->
 
 ### Association
 
