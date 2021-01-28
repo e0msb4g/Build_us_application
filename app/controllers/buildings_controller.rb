@@ -16,5 +16,4 @@ class BuildingsController < ApplicationController
     sign_in user
     redirect_to home_index_path, notice: 'ゲストユーザーとしてログインしました。'
   end
-
 end
