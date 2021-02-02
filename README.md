@@ -16,7 +16,7 @@
 - has_many :comments
 - has_many :contributions
 
-## contributionテーブル
+## boardテーブル
 
 | Column           | Type         | Options                      |
 | ---------------- | ------------ | ---------------------------- |

@@ -1,0 +1,48 @@
+<%= render partial: "layouts/nav"%>
+<div class="main-box">
+  <div class="header-box">
+    <h1 class="header-text">掲示板を新規作成</h1>
+  </div>
+  <div class="form-box">
+
+    <%= form_with model: @board, local: true do |f| %>
+
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">都道府県</label>
+      <span class="badge badge-pill badge-danger">必須</span>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name,{prompt: false}, {class:"form-control",id:"exampleFormControlSelect1"}) %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">市区町村</label>
+      <span class="badge badge-pill badge-danger">必須</span>
+        <%= f.text_field :municipality, class:"form-control", id:"municipality", placeholder:"〇〇市〇〇町"%>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">番地</label>
+      <span class="badge badge-pill badge-secondary">任意</span>
+        <%= f.text_field :address, class:"form-control", id:"address", placeholder:"〇丁目〇番地"%>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">建物名・マンション名</label>
+      <span class="badge badge-pill badge-secondary">任意</span>
+        <%= f.text_field :building_name, class:"form-control", id:"building_name"%>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">質問内容</label>
+      <%= f.text_area :question, class:"form-control", id:"question"%>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">良い点</label>
+      <%= f.text_area :good_points, class:"form-control", id:"good_points"%>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">改善してほしい点</label>
+      <%= f.text_area :bad_points, class:"form-control", id:"bad_points"%>
+    </div>
+      <%= f.submit "掲示板作成",class:"btn btn-primary" %>
+    </div>
+
+    <% end %>
+    
+  </div>
+</div>
