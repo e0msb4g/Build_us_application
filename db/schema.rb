@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2021_02_01_042543) do
     t.text "question"
     t.text "good_points"
     t.text "bad_points"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -37,4 +39,5 @@ ActiveRecord::Schema.define(version: 2021_02_01_042543) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "boards", "users"
 end
