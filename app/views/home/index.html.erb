@@ -1,33 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <%= link_to "Build Us",home_index_path , class:"navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <% if user_signed_in? %>
-        <li class="nav-item nav-link navigation-bar">
-          <%= current_user.nickname%><%="さん"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "ログアウト", destroy_user_session_path,method: :get, class:"nav-link"%>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"></a>
-        </li>
-        <li class="nav-item">
-          <%= link_to "ゲストログイン(閲覧用)", buildings_guest_sign_in_path,method: :post, class:"nav-link"%>
-        </li>
-        <li class="nav-item ">
-          <%= link_to "新規登録", new_user_registration_path, class:"nav-link"%>
-        </li>
-        <li class="nav-item ">
-          <%= link_to "ログイン", new_user_session_path, class:"nav-link"%>
-        </li>
-      </ul>
-      <% end %>
-    </div>
+<%= render partial: "layouts/nav"%>
+<div class="main-box">
+  <div class="header-image">
+    <%= image_tag "top-image2.jpg", class:"img-fluid top-image2" %>
+    <div class="theme text-center text-nowrap">住みたい場所を見つけましょう</div>
+    <%# <%= link_to "掲示板を見に行く", boards_path,class:"btn-index"%>
+    <%= link_to "掲示板を見に行く", boards_path, class:"btn btn-primary btn-lg btn-index"%>
+    <%= link_to "掲示板を作成する", new_board_path, class:"btn btn-primary btn-lg btn-index2"%>
   </div>
-</nav>
+</div>

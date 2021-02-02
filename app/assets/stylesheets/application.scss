@@ -25,7 +25,6 @@
 
 .main-box{
   background-color: #f5f5f5;
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -45,8 +44,7 @@
   background-color: white;
   align-items: center;
   width: 60%;
-  height: calc(100vh - 140px);
-  padding:40px 200px;
+  padding:40px 200px 80px;
 }
 
 .btn-around{
@@ -57,4 +55,40 @@
 .navigation-bar{
   margin-left: 800px;
 }
+
+.top-image2{
+  height: 450px;
+}
+
+.header-image{
+  position: relative;
+  display: flex;
+}
+
+.theme{
+  width: 100%;
+  height:52px;
+  background-color: rgba($color: rgb(56, 56, 219), $alpha: 0.5);
+  position: absolute;
+  top: 25%;
+  color: white;
+  font-size: 30px;
+}
+
+.btn-index{
+  position: absolute;
+  top: 58%;
+  margin-left: 38%;
+  // border: none;
+  // background-color: rgba($color: rgb(252, 252, 252), $alpha: 0.5);
+  // height: 60px;
+  // width: 150px;
+}
+
+.btn-index2{
+  position: absolute;
+  top: 74%;
+  margin-left: 38%;
+}
+
 
