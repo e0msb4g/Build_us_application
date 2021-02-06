@@ -1,10 +1,11 @@
 class BuildingsController < ApplicationController
   def index
+    @boards = Board.includes(:user)
     if user_signed_in?
       render "home/index"
     else
       render "buildings/index"
-    end 
+    end
   end
 
   def new_guest

@@ -3,6 +3,7 @@ class CreateBoards < ActiveRecord::Migration[6.0]
     create_table :boards do |t|
 
       t.timestamps
+      t.string :title, null:false
       t.integer :prefecture_id, null:false
       t.string :municipality, null:false
       t.string :address
