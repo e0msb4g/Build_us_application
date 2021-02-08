@@ -2,7 +2,7 @@
 <div class="main-box">
   <div class="header-image">
     <%= image_tag "top-image2.jpg", class:"img-fluid top-image2" %>
-    <div class="theme text-center text-nowrap">住みたい場所を見つけましょう</div>
+    <div class="theme text-center text-nowrap">住みたいと思える場所を見つけましょう</div>
     <%# <%= link_to "掲示板を見に行く", boards_path,class:"btn-index"%>
     <%= link_to "掲示板を見に行く", boards_path, class:"btn btn-primary btn-lg btn-index"%>
     <%= link_to "掲示板を作成する", new_board_path, class:"btn btn-primary btn-lg btn-index2"%>
@@ -38,6 +38,9 @@
   
   <div class="favorite-board">
     <h2 class="container-headline">✔︎ 気になる！をした掲示板</h2>
+    <ul class="board-box">
+    <%# <h2 class="container-headline">✔︎ 気になる！をした掲示板</h2> %>
+    </ul>
   </div>
   </div>
   
