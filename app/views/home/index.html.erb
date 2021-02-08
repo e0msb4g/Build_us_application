@@ -2,9 +2,46 @@
 <div class="main-box">
   <div class="header-image">
     <%= image_tag "top-image2.jpg", class:"img-fluid top-image2" %>
-    <div class="theme text-center text-nowrap">住みたい場所を見つけましょう</div>
+    <div class="theme text-center text-nowrap">住みたいと思える場所を見つけましょう</div>
     <%# <%= link_to "掲示板を見に行く", boards_path,class:"btn-index"%>
     <%= link_to "掲示板を見に行く", boards_path, class:"btn btn-primary btn-lg btn-index"%>
     <%= link_to "掲示板を作成する", new_board_path, class:"btn btn-primary btn-lg btn-index2"%>
   </div>
+
+  <div class="main-board-box">
+  
+  <div class="self-board">
+  <h2 class="container-headline">✔︎ あなたの投稿した掲示板</h2>
+  <ul class="board-box">
+  <% if current_user.boards != nil %>
+  <% @boards.each do |board|%>
+  <li class="card" style="width: 18rem;">
+    <% if board.image.attached? %>
+      <%= image_tag board.image, class: "bd-placeholder-img card-img-top" %>
+    <% else %>
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="50%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">No Image</text></svg>
+    <% end %>
+    <div class="card-body">
+      <h4 class="card-title"><%= board.title %></h4>
+      <p class="card-text"><%= board.prefecture.name %></p>
+      <p class="card-text"><%= board.municipality %></p>
+      <%= link_to "投稿詳細へ", "#", class:"btn btn-primary"%>
+      <p class="card-text"><small class="text-muted"><%= board.created_at %></small></p>
+    </div>
+  </li>
+  <% end %>
+  <% else %>
+  <h3>掲示板を作成してみましょう！</h3> %>
+  <% end %>
+  </ul>
+  </div>
+  
+  <div class="favorite-board">
+    <h2 class="container-headline">✔︎ 気になる！をした掲示板</h2>
+    <ul class="board-box">
+    <%# <h2 class="container-headline">✔︎ 気になる！をした掲示板</h2> %>
+    </ul>
+  </div>
+  </div>
+  
 </div>
