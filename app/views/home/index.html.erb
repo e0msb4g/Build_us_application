@@ -3,7 +3,6 @@
   <div class="header-image">
     <%= image_tag "top-image2.jpg", class:"img-fluid top-image2" %>
     <div class="theme text-center text-nowrap">住みたいと思える場所を見つけましょう</div>
-    <%# <%= link_to "掲示板を見に行く", boards_path,class:"btn-index"%>
     <%= link_to "掲示板を見に行く", boards_path, class:"btn btn-primary btn-lg btn-index"%>
     <%= link_to "掲示板を作成する", new_board_path, class:"btn btn-primary btn-lg btn-index2"%>
   </div>
@@ -25,7 +24,7 @@
       <h4 class="card-title"><%= board.title %></h4>
       <p class="card-text"><%= board.prefecture.name %></p>
       <p class="card-text"><%= board.municipality %></p>
-      <%= link_to "投稿詳細へ", "#", class:"btn btn-primary"%>
+      <%= link_to "投稿詳細へ", board_path(board.id),method: :get, class:"btn btn-primary"%>
       <p class="card-text"><small class="text-muted"><%= board.created_at %></small></p>
     </div>
   </li>

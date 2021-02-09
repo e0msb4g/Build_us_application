@@ -1,0 +1,48 @@
+<%= render partial: "layouts/nav"%>
+<div class="main-box">
+  <div class="header-box">
+    <h1 class="header-text header-border">掲示板詳細</h1>
+  </div>
+
+  <div class="form-box">
+    <div class="btn-box">
+      <%= link_to "マイページへ", home_index_path, class:"btn btn-primary btn-lg"%>
+      <%= link_to "掲示板一覧へ", boards_path, class:"btn btn-secondary btn-lg"%>
+    </div>
+    <h2 class="title-text text-center"><%= @board.title %></h2>
+    <%= image_tag @board.image, class:"img-fluid mx-auto d-block"%>
+
+    <table class="data-table">
+      <tbody>
+        <tr>
+          <th class="table_column1">都道府県</th>
+          <td class="table_column2"><%= @board.prefecture.name %></td>
+        </tr>
+        <tr>
+          <th class="table_column1">市区町村</th>
+          <td class="table_column2"><%= @board.municipality %></td>
+        </tr>
+        <tr>
+          <th class="table_column1">番地</th>
+          <td class="table_column2"><%= @board.address %></td>
+        </tr>
+        <tr>
+          <th class="table_column1">建物名・マンション名</th>
+          <td class="table_column2"><%= @board.building_name %></td>
+        </tr>
+        <tr>
+          <th class="table_column1">質問内容</th>
+          <td class="table_column2"><%= @board.question %></td>
+        </tr>
+        <tr>
+          <th class="table_column1">良い点</th>
+          <td class="table_column2"><%= @board.good_points %></td>
+        </tr>
+        <tr>
+          <th class="table_column1">改善してほしい点</th>
+          <td class="table_column2"><%= @board.bad_points %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
