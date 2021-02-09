@@ -1,7 +1,7 @@
 <%= render partial: "layouts/nav"%>
 <div class="main-box">
   <div class="header-box">
-    <h1 class="header-text">掲示板一覧</h1>
+    <h1 class="header-text header-border">掲示板一覧</h1>
   </div>
 
   <div class="form-box">
@@ -17,7 +17,7 @@
         <h4 class="card-title"><%= board.title %></h4>
         <p class="card-text"><%= board.prefecture.name %></p>
         <p class="card-text"><%= board.municipality %></p>
-        <%= link_to "投稿詳細へ", "#", class:"btn btn-primary"%>
+        <%= link_to "投稿詳細へ", board_path(board.id),method: :get, class:"btn btn-primary"%>
         <p class="card-text"><small class="text-muted"><%= board.created_at %></small></p>
       </div>
     </div>

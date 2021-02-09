@@ -32,7 +32,7 @@
 
 .header-box{
   background-color: white;
-  height:140px;
+  height:18vh;
   width: 80%;
   margin: 0% 10%;
   display: flex;
@@ -45,7 +45,7 @@
   background-color: white;
   align-items: center;
   width: 80%;
-  padding:6vh 20vw 6vh;
+  padding:6vh 16% 6vh;
 }
 
 .btn-around{
@@ -133,3 +133,60 @@
  min-width: 200px;
 }
 
+.title-text{
+  margin-bottom: 6%;
+}
+
+.data-table{
+  border-collapse: collapse;
+  border:0.1px solid #e6e4e4;
+  background-color: #f8f8f8;
+  width: 100%;
+  margin: 8% 0;
+}
+
+.table_column1{
+  text-align: left;
+  border: 0.1px solid  #e6e4e4;
+  border-collapse: collapse;
+  width: 30%;
+  padding: 2% 1%;
+}
+
+.table_column2{
+  font-weight: bold;
+  text-align: left;
+  border: 0.1px solid #e6e4e4;
+  width: 70%;
+  border-collapse: collapse;
+  background-color: white;
+  padding: 2% 1%;
+}
+
+
+.header-border{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-border:before, .header-border:after {
+  content: '';
+  top: 50%;
+  width: 5vw;
+  height: 2px;
+  border-top: solid 2px #3b4043;
+}
+
+.header-border:before {
+  margin-left:1em;
+}
+.header-border:after {
+  margin-right:1em;
+}
+
+.btn-box{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8%;
+}
