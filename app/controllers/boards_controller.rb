@@ -18,6 +18,8 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
+    @comment = Comment.new
+    @comments = @board.comments
   end
 
   def edit

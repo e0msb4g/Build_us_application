@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   post '/buildings/guest_sign_in', to: 'buildings#new_guest'
 
   resources :home
-  resources :boards
+  resources :boards do
+    resources :comments, only: :create
+  end
 end

@@ -55,5 +55,11 @@
       <%= link_to "掲示板を削除", board_path,method: :delete, class:"btn btn-danger btn-lg" %>
     </div>
     <% end %>
+
+    <%= form_with(model: [@board, @comment], local: true) do |f| %>
+        <%= f.text_area :text, id:"text" %>
+        <%= f.hidden_field :board_id, value: @board.id %>
+        <%= f.submit "SEND" %>
+    <% end %>
   </div>
 </div>
