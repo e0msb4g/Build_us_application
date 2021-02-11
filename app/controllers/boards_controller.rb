@@ -21,6 +21,26 @@ class BoardsController < ApplicationController
   end
 
   def edit
+    @board = Board.find(params[:id])
+  end
+
+  def update
+    @board = Board.find(params[:id])
+    if @board.update(board_params)
+      redirect_to  board_path(@board.id)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @board = Board.find(params[:id])
+    if current_user.id == @board.user.id
+      @board.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   private
