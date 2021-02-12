@@ -56,4 +56,27 @@
     </div>
     <% end %>
   </div>
+
+  <div class="comment-box">
+    <% if @comments != nil %>
+      <% @comments.each do |comment| %>
+        <% if comment.user_id != current_user.id %>
+          <%= comment.user.nickname %>
+          <div class="other-comment">
+              <%= comment.text %>
+          </div>
+        <% else %>
+            <p class="anata">あなた</p>
+            <div class="your-comment">
+            <%= comment.text %>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+    <%= form_with(model: [@board, @comment], local: true) do |f| %>
+      <%= f.text_area :text, id:"text", class:"comment-form"%>
+      <%= f.hidden_field :board_id, value: @board.id %>
+      <%= f.submit "コメントを送信する", class:"btn btn-secondary btn-lg btn-block" %>
+    <% end %>
+  </div>
 </div>
