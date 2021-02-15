@@ -18,8 +18,9 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
+    gon.board = @board
     @comment = Comment.new
-    @comments = Comment.includes(:user).order("created_at ASC")
+    @comments = @board.comments.order("created_at ASC")
   end
 
   def edit
