@@ -1,0 +1,9 @@
+<% if current_user.already_liked?(board) %>
+   <%= link_to board_like_path(@board.id), method: :delete do %>
+       <button type="button" class="btn btn-outline-success">気になる！済</button>
+   <% end %>
+<% else %>
+   <%= link_to board_likes_path(board), method: :post do %>
+       <button type="button" class="btn btn-success ">気になる！</button>
+   <% end %>
+<% end %>

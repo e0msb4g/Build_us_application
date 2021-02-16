@@ -11,4 +11,10 @@ class User < ApplicationRecord
 
   has_many :boards
   has_many :comments
+  has_many :likes
+
+
+  def already_liked?(board)
+    self.likes.exists?(board_id: board.id)
+  end
 end

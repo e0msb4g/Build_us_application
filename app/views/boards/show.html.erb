@@ -89,6 +89,10 @@
       <%= link_to "掲示板を編集", edit_board_path, class:"btn btn-primary btn-lg" %>
       <%= link_to "掲示板を削除", board_path,method: :delete, class:"btn btn-danger btn-lg" %>
     </div>
+    <% else %>
+      <div id="likes_buttons_<%= @board.id %>">
+      <%= render 'likes/like', board: @board %>
+      </div> 
     <% end %>
   </div>
 
