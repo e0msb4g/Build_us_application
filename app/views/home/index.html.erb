@@ -8,12 +8,13 @@
   <div class="board-btn-box">
     <%= link_to "掲示板を見に行く", boards_path, class:"btn btn-primary btn-lg btn-index"%>
     <%= link_to "掲示板を作成する", new_board_path, class:"btn btn-primary btn-lg btn-index"%>
-  </div>
+  
 
-  <div class="main-board-box">
+  <div class="container">
+  <div class="row">
  
   
-  <div class="self-board">
+  <div class="col-lg-6">
   <h2 class="container-headline">✔︎ あなたの投稿した掲示板</h2>
   <ul class="board-box">
   <% if current_user.boards != nil %>
@@ -39,7 +40,7 @@
   </ul>
   </div>
   
-  <div class="favorite-board">
+  <div class="col-lg-6">
     <h2 class="container-headline">✔︎ 気になる！をした掲示板</h2>
     <ul class="board-box">
       <% current_user.like_boards.each do |board| %>
@@ -59,6 +60,9 @@
       </li>
       <% end %>
     </ul>
+
+  </div>
+  </div>
   </div>
   </div>
   
