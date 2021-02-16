@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :boards
   has_many :comments
   has_many :likes
+  has_many :like_boards, through: :likes, source: :board
 
 
   def already_liked?(board)
