@@ -10,8 +10,9 @@
       <%= link_to "掲示板一覧へ", boards_path, class:"btn btn-secondary btn-lg"%>
     </div>
     <h3 class="title-text text-center"><%= @board.title %></h2>
-    <%= image_tag @board.image, class:"img-fluid mx-auto d-block"%>
-
+    <% if @board.image.attached? %>
+      <%= image_tag @board.image, class:"img-fluid mx-auto d-block"%>
+    <% end %>
     <div id="map"></div>
 
 

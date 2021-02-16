@@ -81,20 +81,19 @@
   font-size: 30px;
 }
 
-.btn-index{
-  position: absolute;
-  top: 48%;
-  margin-left: 38%;
-  // border: none;
-  // background-color: rgba($color: rgb(252, 252, 252), $alpha: 0.5);
-  // height: 60px;
-  // width: 150px;
+
+
+.board-btn-box{
+  background-color: white;
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20%;
 }
 
-.btn-index2{
-  position: absolute;
-  top: 68%;
-  margin-left: 38%;
+.btn-index{
+  margin-top: 4%;
 }
 
 .board-box{
