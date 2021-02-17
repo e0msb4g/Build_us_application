@@ -55,7 +55,6 @@ gem 'active_hash'
 gem 'bootstrap', '~> 4.5.0'
 gem 'devise'
 gem 'image_processing', '~> 1.2'
-gem 'jquery-rails'
 gem 'mini_magick'
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
@@ -65,3 +64,4 @@ gem "gmaps4rails"
 gem "geocoder"
 gem "gon"
 gem "dotenv-rails"
+gem 'jquery-rails'
