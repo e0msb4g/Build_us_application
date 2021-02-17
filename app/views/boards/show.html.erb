@@ -5,7 +5,7 @@
   </div>
 
   <div class="form-box">
-    <div class="btn-box">
+    <div class="show-btn-box">
       <%= link_to "マイページへ", home_index_path, class:"btn btn-primary btn-lg"%>
       <%= link_to "掲示板一覧へ", boards_path, class:"btn btn-secondary btn-lg"%>
     </div>
@@ -86,7 +86,7 @@
     </table>
 
     <% if @board.user_id == current_user.id %>
-    <div class="btn-box">
+    <div class="show-btn-box">
       <%= link_to "掲示板を編集", edit_board_path, class:"btn btn-primary btn-lg" %>
       <%= link_to "掲示板を削除", board_path,method: :delete, class:"btn btn-danger btn-lg" %>
     </div>
