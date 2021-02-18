@@ -5,6 +5,10 @@
     <h1 class="header-text header-border">ログイン</h1>
   </div>
   <div class="form-box">
+  <div class="error-alert text-danger">
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email</label>
       <%= f.email_field :email, class:"form-control", id:"email", placeholder:"Email"%>

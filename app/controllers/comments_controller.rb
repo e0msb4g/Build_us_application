@@ -6,6 +6,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to board_path(params[:board_id])
     else
+      # render template: 'boards/show'
+      flash[:error_messages] = @comment.errors.full_messages
       redirect_to board_path(params[:board_id])
     end
   end
