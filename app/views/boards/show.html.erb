@@ -87,11 +87,11 @@
 
     <% if @board.user_id == current_user.id %>
     <div class="show-btn-box">
-      <%= link_to "掲示板を編集", edit_board_path, class:"btn btn-primary btn-lg" %>
-      <%= link_to "掲示板を削除", board_path,method: :delete, class:"btn btn-danger btn-lg" %>
+      <%= link_to "掲示板を編集", edit_board_path(@board.id), class:"btn btn-primary btn-lg" %>
+      <%= link_to "掲示板を削除", board_path(@board.id),method: :delete, class:"btn btn-danger btn-lg" %>
     </div>
     <% else %>
-      <div id="likes_buttons_<%= @board.id %>">
+      <div id="likes_buttons_"<%= @board.id %>>
       <%= render 'likes/like', board: @board %>
       </div> 
     <% end %>
@@ -114,6 +114,10 @@
       <% end %>
     <% end %>
     <%= form_with(model: [@board, @comment], local: true) do |f| %>
+    <%# <%= render 'layouts/error_messages', model: f.object %>
+    <div class="text-danger">
+    <%= flash[:error_messages] %>
+    </div>
       <%= f.text_area :text, id:"text", class:"comment-form"%>
       <%= f.hidden_field :board_id, value: @board.id %>
       <%= f.submit "コメントを送信する", class:"btn btn-secondary btn-lg btn-block" %>
