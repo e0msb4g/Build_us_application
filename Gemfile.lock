@@ -101,6 +101,11 @@ GEM
       railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.7.0)
+    factory_bot (6.1.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.1.0)
+      factory_bot (~> 6.1.0)
+      railties (>= 5.0.0)
     ffi (1.14.2)
     geocoder (1.6.5)
     globalid (0.4.2)
@@ -316,6 +321,7 @@ DEPENDENCIES
   devise-i18n
   devise-i18n-views
   dotenv-rails
+  factory_bot_rails
   geocoder
   gmaps4rails
   gon
