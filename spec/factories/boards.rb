@@ -8,5 +8,9 @@ FactoryBot.define do
     building_name    {'岐阜ビル'}
     question         {'岐阜は海無し県ですか？'}
     impressions      {'最高の街です'}
+
+    after(:build) do |board|
+      board.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
+    end
   end
 end
