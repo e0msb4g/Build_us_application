@@ -52,7 +52,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :prefecture_id, :municipality, :address, :building_name, :question,
-                                  :good_points, :bad_points, :image).merge(user_id: current_user.id)
+    params.require(:board).permit(:title, :prefecture_id, :municipality, :edaban, :building_name, :question,
+                                  :impressions, :image).merge(user_id: current_user.id)
   end
 end
