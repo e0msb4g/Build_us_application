@@ -32,17 +32,14 @@
       <span class="badge badge-pill badge-secondary">任意</span>
         <%= f.file_field :image, class:"form-control-file", id:"item-image" %>
     </div>
+    <span class="badge badge-pill badge-danger">いずれか必須</span>
     <div class="form-group">
       <label for="exampleInputPassword1">質問内容</label>
       <%= f.text_area :question, class:"form-control", id:"question"%>
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">良い点</label>
-      <%= f.text_area :good_points, class:"form-control", id:"good_points"%>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">改善してほしい点</label>
-      <%= f.text_area :bad_points, class:"form-control", id:"bad_points"%>
+      <label for="exampleInputPassword1">住んでみての感想</label>
+      <%= f.text_area :impressions, class:"form-control", id:"impressions"%>
     </div>
       <%= f.submit "掲示板作成",class:"btn btn-primary" %>
     </div>

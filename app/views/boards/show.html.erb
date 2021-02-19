@@ -20,21 +20,17 @@
   let map;
 
   function initMap() {
-    // geocoderを初期化
     geocoder = new google.maps.Geocoder()
 
     map = new google.maps.Map(document.getElementById('map'), {
-      // コントローラーで定義した変数から緯度経度を呼び出し、マップの中心に表示
       center: {
         lat: gon.board.latitude,
         lng: gon.board.longitude
       },
-      // マップの倍率はお好みで
       zoom: 17,
     });
 
     marker = new google.maps.Marker({
-      // コントローラーで定義した変数から緯度経度を呼び出し、マーカーを立てる
       position: {
         lat: gon.board.latitude,
         lng: gon.board.longitude
@@ -76,11 +72,7 @@
         </tr>
         <tr>
           <th class="table_column1">良い点</th>
-          <td class="table_column2"><%= @board.good_points %></td>
-        </tr>
-        <tr>
-          <th class="table_column1">改善してほしい点</th>
-          <td class="table_column2"><%= @board.bad_points %></td>
+          <td class="table_column2"><%= @board.impressions %></td>
         </tr>
       </tbody>
     </table>
@@ -114,7 +106,6 @@
       <% end %>
     <% end %>
     <%= form_with(model: [@board, @comment], local: true) do |f| %>
-    <%# <%= render 'layouts/error_messages', model: f.object %>
     <div class="text-danger">
     <%= flash[:error_messages] %>
     </div>

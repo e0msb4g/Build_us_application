@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   with_options presence: true do
-    validates :nickname, uniqueness:true
-    validates :email, uniqueness:true
+    validates :nickname, uniqueness: { case_sensitive: true }
+    validates :email, uniqueness: { case_sensitive: true }
     validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i },length: { minimum: 8 }
   end
 
