@@ -5,9 +5,13 @@
   </div>
 
   <div class="form-box">
+    <div class="home-btn-box">
+    <%= link_to "マイページへ戻る", root_path, class:"btn btn-secondary btn-lg btn-index"%>
+    </div>
+
     <% if @boards != nil %>
     <% @boards.each do |board|%>
-    <div class="card mb-3">
+    <div class="card mb-3 move-right">
     <% if board.image.attached? %>
       <%= image_tag board.image, class:"bd-placeholder-img card-img-top" %>
     <% else %>
