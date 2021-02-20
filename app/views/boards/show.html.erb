@@ -10,6 +10,23 @@
       <%= link_to "掲示板一覧へ", boards_path, class:"btn btn-secondary btn-lg"%>
     </div>
     <h3 class="title-text text-center"><%= @board.title %></h2>
+    <table class="data-table">
+      <tbody>
+        <% if @board.question != "" %>
+        <tr>
+          <th class="table_column1">質問内容</th>
+          <td class="table_column2"><%= @board.question %></td>
+        </tr>
+        <% end %>
+
+        <% if @board.impressions != "" %>
+        <tr>
+          <th class="table_column1">住んでみての感想</th>
+          <td class="table_column2"><%= @board.impressions %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
     <% if @board.image.attached? %>
       <%= image_tag @board.image, class:"img-fluid mx-auto d-block"%>
     <% end %>
@@ -58,22 +75,33 @@
           <th class="table_column1">市区町村</th>
           <td class="table_column2"><%= @board.municipality %></td>
         </tr>
+        <% if @board.edaban != "" %>
         <tr>
           <th class="table_column1">番地</th>
           <td class="table_column2"><%= @board.edaban %></td>
         </tr>
+        <% end %>
+
+        <% if @board.building_name != "" %>
         <tr>
           <th class="table_column1">建物名・マンション名</th>
           <td class="table_column2"><%= @board.building_name %></td>
         </tr>
+        <% end %>
+
+        <% if @board.question != "" %>
         <tr>
           <th class="table_column1">質問内容</th>
           <td class="table_column2"><%= @board.question %></td>
         </tr>
+        <% end %>
+
+        <% if @board.impressions != "" %>
         <tr>
-          <th class="table_column1">良い点</th>
+          <th class="table_column1">住んでみての感想</th>
           <td class="table_column2"><%= @board.impressions %></td>
         </tr>
+        <% end %>
       </tbody>
     </table>
 
