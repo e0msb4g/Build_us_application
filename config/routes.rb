@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   resources :home
   resources :boards do
+    collection do
+      get 'search'
+    end
     resources :comments, only: :create
-    resources :likes, only:[:post, :create, :destroy]
+    resources :likes, only: %i[post create destroy]
   end
 end

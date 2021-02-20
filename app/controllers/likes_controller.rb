@@ -2,7 +2,7 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_like
 
-  def create    
+  def create
     @like = current_user.likes.create(board_id: params[:board_id])
     redirect_to board_path(params[:board_id])
   end
@@ -14,6 +14,7 @@ class LikesController < ApplicationController
   end
 
   private
+
   def set_like
     @board = Board.find(params[:board_id])
   end

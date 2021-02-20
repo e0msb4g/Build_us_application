@@ -7,7 +7,7 @@
   <div class="form-box">
     <div class="show-btn-box">
       <%= link_to "マイページへ", home_index_path, class:"btn btn-primary btn-lg"%>
-      <%= link_to "掲示板一覧へ", boards_path, class:"btn btn-secondary btn-lg"%>
+      <%= link_to "掲示板一覧へ", boards_path, class:"btn btn-secondary btn-lg btn-top"%>
     </div>
     <h3 class="title-text text-center"><%= @board.title %></h2>
     <table class="data-table">
@@ -108,7 +108,7 @@
     <% if @board.user_id == current_user.id %>
     <div class="show-btn-box">
       <%= link_to "掲示板を編集", edit_board_path(@board.id), class:"btn btn-primary btn-lg" %>
-      <%= link_to "掲示板を削除", board_path(@board.id),method: :delete, class:"btn btn-danger btn-lg" %>
+      <%= link_to "掲示板を削除", board_path(@board.id),method: :delete, class:"btn btn-danger btn-lg btn-top" %>
     </div>
     <% else %>
       <div id="likes_buttons_"<%= @board.id %>>
