@@ -7,7 +7,7 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nickname, uniqueness: { case_sensitive: true }
     validates :email, uniqueness: { case_sensitive: true }
-    validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i },length: { minimum: 8 }
+    validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }, length: { minimum: 8 }
   end
 
   has_many :boards
@@ -15,8 +15,7 @@ class User < ApplicationRecord
   has_many :likes
   has_many :like_boards, through: :likes, source: :board
 
-
   def already_liked?(board)
-    self.likes.exists?(board_id: board.id)
+    likes.exists?(board_id: board.id)
   end
 end

@@ -1,7 +1,6 @@
 class BoardsController < ApplicationController
-
   before_action :authenticate_user!
-  
+
   def index
     @boards = Board.includes(:user)
   end
@@ -23,7 +22,7 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
     gon.board = @board
     @comment = Comment.new
-    @comments = @board.comments.order("created_at ASC")
+    @comments = @board.comments.order('created_at ASC')
   end
 
   def edit
@@ -33,7 +32,7 @@ class BoardsController < ApplicationController
   def update
     @board = Board.find(params[:id])
     if @board.update(board_params)
-      redirect_to  board_path(@board.id)
+      redirect_to board_path(@board.id)
     else
       render :edit
     end
@@ -47,6 +46,10 @@ class BoardsController < ApplicationController
     else
       redirect_to root_path
     end
+  end
+
+  def search
+    @boards = Board.search(params[:search])
   end
 
   private

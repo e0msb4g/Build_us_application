@@ -40,13 +40,13 @@ RSpec.describe Board, type: :model do
       it 'タイトルが空だと作成できない' do
         @board.title = ''
         @board.valid?
-        expect(@board.errors.full_messages).to include("Title：タイトルを入力してください。")
+        expect(@board.errors.full_messages).to include('Title：タイトルを入力してください。')
       end
 
       it '都道府県が選択されていないと作成できない' do
         @board.prefecture_id = 0
         @board.valid?
-        expect(@board.errors.full_messages).to include("Prefecture：都道府県を選択してください")
+        expect(@board.errors.full_messages).to include('Prefecture：都道府県を選択してください')
       end
 
       it '市区町村が空だと作成できない' do
@@ -59,23 +59,23 @@ RSpec.describe Board, type: :model do
         @board.question = ''
         @board.impressions = ''
         @board.valid?
-        expect(@board.errors.full_messages).to include("Question or impressions：「質問内容」もしくは「住んでみての感想」のいずれかは必須です。")
+        expect(@board.errors.full_messages).to include('Question or impressions：「質問内容」もしくは「住んでみての感想」のいずれかは必須です。')
       end
 
       it 'タイトルの文字数が41文字以上だと作成できない' do
-        @board.title = 'a'*100
+        @board.title = 'a' * 100
         @board.valid?
         expect(@board.errors.full_messages).to include('Titleは40文字以内で入力してください')
       end
 
       it 'questionの文字数が1001文字以上だと作成できない' do
-        @board.question = 'a'*1001
+        @board.question = 'a' * 1001
         @board.valid?
         expect(@board.errors.full_messages).to include('Questionは1000文字以内で入力してください')
       end
 
       it 'impressionsの文字数が1001文字以上だと作成できない' do
-        @board.impressions = 'a'*1001
+        @board.impressions = 'a' * 1001
         @board.valid?
         expect(@board.errors.full_messages).to include('Impressionsは1000文字以内で入力してください')
       end
