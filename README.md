@@ -44,7 +44,7 @@ https://build-us.com/
 
 ・ Mysql
 
-・ AWS（S3,EC2,Route53）
+・ AWS（S3,EC2,Route53,ALB）
     
 ・ Capistrano
 
