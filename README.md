@@ -15,6 +15,7 @@
 「管理が行き届いているマンションに引っ越したいけど、住んでる方に直接聞きづらいし・・。」
 
 そんな新たな住居をお探しの方のお悩みをもとに開発した、不動産の情報を気軽に共有できるサービスです。
+レスポンシブデザインに対応してますので、スマートフォンからもご確認いただけます。
 
 [![Image from Gyazo](https://i.gyazo.com/99a4c5cfa1e99ed3df5f37aab71104a5.jpg)](https://gyazo.com/99a4c5cfa1e99ed3df5f37aab71104a5)
 
@@ -25,7 +26,7 @@
 
 # URL（デプロイ）
 
-https://build-us.herokuapp.com/
+build-us.com
 
 トップページのヘッダーにある「ゲストログイン(閲覧用)」をクリックいただくと、ゲストユーザーとしてログインができます。
 
@@ -43,9 +44,7 @@ https://build-us.herokuapp.com/
 
 ・ Mysql
 
-・ AWS
-    ・EC2
-    ・S3
+・ AWS（S3,EC2,Route53）
     
 ・ Capistrano
 
