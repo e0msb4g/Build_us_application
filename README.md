@@ -54,6 +54,8 @@ https://build-us.com/
 
 ・ Google Maps API(Google Maps Javascript,Geocoder)
 
+・ Bootstrap 4.5.0
+
 
 ## 具体的な利用方法
 ## ①　ログイン
