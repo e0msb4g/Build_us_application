@@ -19,6 +19,7 @@ Build Us (ビルダス)
 # URL（デプロイ）
 
 https://build-us.herokuapp.com/
+
 トップページのヘッダーにある「ゲストログイン(閲覧用)」をクリックいただくと、ゲストユーザーとしてログインができます。
 
 # 使用技術
@@ -38,9 +39,13 @@ https://build-us.herokuapp.com/
 ・ AWS
     ・EC2
     ・S3
+    
 ・ Capistrano
+
 ・ Rubocop(コード整形）
+
 ・ Rspec(テスト)
+
 ・ Google Maps API
     ・GoogleMapsJavascript
     ・Geocoder
