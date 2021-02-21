@@ -282,6 +282,10 @@
   animation-delay  : 15s;
 }
 
+.card-padding{
+  padding-left: 40px;
+}
+
 @keyframes bgAnime {
    0% { opacity: 0; }
    5% { opacity: 1; }
@@ -406,4 +410,25 @@ h5{
   font-size: 22px;
   font-family: 'ヒラギノ明朝 Pro W6'
 }
+}
+
+@media (max-width: 500px){
+  .center-box{
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 60%;
+    left: 57%;
+    width: 280px;
+    height: 180px;  
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 500px){
+  .center-name{
+    font-family: cursive;
+    font-size: 50px;
+    margin: 2px 0;
+  }
 }
