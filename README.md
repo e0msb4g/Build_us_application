@@ -24,11 +24,17 @@ https://build-us.herokuapp.com/
 # 使用技術
 
 ・ HTML
+
 ・ CSS(SCSS)
+
 ・ JavaScript(jQuery)
+
 ・Ruby 2.6.5
+
 ・Ruby on Rails 6.0.0
+
 ・ Mysql
+
 ・ AWS
     ・EC2
     ・S3
