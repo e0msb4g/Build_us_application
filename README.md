@@ -37,9 +37,9 @@ https://build-us.herokuapp.com/
 
 ・ JavaScript(jQuery)
 
-・Ruby 2.6.5
+・ Ruby 2.6.5
 
-・Ruby on Rails 6.0.0
+・ Ruby on Rails 6.0.0
 
 ・ Mysql
 
@@ -53,9 +53,7 @@ https://build-us.herokuapp.com/
 
 ・ Rspec(テスト)
 
-・ Google Maps API
-    ・GoogleMapsJavascript
-    ・Geocoder
+・ Google Maps API(Google Maps Javascript,Geocoder)
 
 
 ## 具体的な利用方法
