@@ -31,7 +31,7 @@
       <p class="card-text"><%= board.prefecture.name %></p>
       <p class="card-text"><%= board.municipality %></p>
       <%= link_to "投稿詳細へ", board_path(board.id),method: :get, class:"btn btn-primary"%>
-      <p class="card-text"><small class="text-muted"><%= board.created_at %></small></p>
+      <p class="card-text"><small class="text-muted">投稿日時 <%= board.created_at.strftime("%Y-%m-%d %H:%M") %></small></p>
     </div>
   </li>
   <% end %>
@@ -54,7 +54,7 @@
       <p class="card-text"><%= board.prefecture.name %></p>
       <p class="card-text"><%= board.municipality %></p>
       <%= link_to "投稿詳細へ", board_path(board.id),method: :get, class:"btn btn-primary"%>
-      <p class="card-text"><small class="text-muted"><%= board.created_at %></small></p>
+      <p class="card-text"><small class="text-muted">投稿日時 <%= board.created_at.strftime("%Y-%m-%d %H:%M") %></small></p>
     </div>
   </li>
       <% end %>

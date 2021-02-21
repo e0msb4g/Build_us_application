@@ -88,20 +88,6 @@
           <td class="table_column2"><%= @board.building_name %></td>
         </tr>
         <% end %>
-
-        <% if @board.question != "" %>
-        <tr>
-          <th class="table_column1">質問内容</th>
-          <td class="table_column2"><%= @board.question %></td>
-        </tr>
-        <% end %>
-
-        <% if @board.impressions != "" %>
-        <tr>
-          <th class="table_column1">住んでみての感想</th>
-          <td class="table_column2"><%= @board.impressions %></td>
-        </tr>
-        <% end %>
       </tbody>
     </table>
 
@@ -126,7 +112,7 @@
               <%= comment.text %>
           </div>
         <% else %>
-            <p class="anata">あなた</p>
+          <div class="text-right">あなた</div>
             <div class="your-comment">
             <%= comment.text %>
           </div>
