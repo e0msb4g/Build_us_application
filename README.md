@@ -64,6 +64,10 @@ https://build-us.com/
 
 ・ Bootstrap 4.5.0
 
+## インフラ構成図
+
+[![Image from Gyazo](https://i.gyazo.com/63b4accdf924d136e84089bffd73206d.png)](https://gyazo.com/63b4accdf924d136e84089bffd73206d)
+
 
 ## 具体的な利用方法
 ## ①　ログイン
