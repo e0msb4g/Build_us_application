@@ -54,6 +54,8 @@ https://build-us.com/
     
 ・ Capistrano
 
+・ Docker/Docker-conpose
+
 ・ Rubocop(コード整形）
 
 ・ Rspec(テスト)
