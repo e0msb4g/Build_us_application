@@ -1,9 +1,5 @@
 # アプリケーション概要
 
-## アプリケーション名
-
-### Build Us (ビルダス)
-
 
 [![Image from Gyazo](https://i.gyazo.com/c7021af7740cd73960379d31de8ab473.jpg)](https://gyazo.com/c7021af7740cd73960379d31de8ab473)
 
